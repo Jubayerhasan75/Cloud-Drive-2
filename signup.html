@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - File Repository</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+    .signup-container {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      width: 380px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .signup-container:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+    .signup-container h2 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+    .signup-container input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .signup-container input:focus {
+      border-color: #1abc9c;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .signup-container button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 18px;
+      background-color: #1abc9c;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .signup-container button:hover {
+      background-color: #16a085;
+      transform: translateY(-2px);
+    }
+    .login-link {
+      margin-top: 20px;
+      display: block;
+      color: #82cfff;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .login-link:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <form action="register.php" method="POST">
+      <input type="email" name="email" placeholder="Enter Email" required />
+      <input type="password" name="password" placeholder="Choose Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <a class="login-link" href="login.html">Already have an account? Login</a>
+  </div>
+</body>
+</html>
